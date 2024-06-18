@@ -8,35 +8,36 @@ const professionalSchema = mongoose.Schema(
             type: String,
             require: [true, "PLease enter your name"]
         },
-        address: {
-            type: String,
-            require: true,
+        contact: {
+            adreess: {
+                type: String,
+                require: true,
+                city: {
+                    type: String,
+                    require: true,
+                    phone: {
+                        type: Number,
+                        require: true,
+                    },
+                    image: {
+                        type: String,
+                        require: false,
+                    },
+                    email: {
+                        type: String,
+                        require: true,
+                    },
+                    password: {
+                        type: String,
+                        require: true,
+                    }
+                }
+            }
         },
-        city: {
-            type: String,
-            require: true,
-        },
-        address: {
-            type: String,
-            require: true,
-        },
-        phone: {
-            type: String,
-            require: true,
-        },
-        image: {
-            type: String,
-            require: false,
-        },
-        active: {
-            type: Boolean,
-            require: true,
-        }
-    },
     {
         timestamps: true
     }
-);
+ })
 
 const Professional = mongoose.model('Professional', professionalSchema);
 
