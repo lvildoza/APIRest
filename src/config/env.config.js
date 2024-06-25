@@ -18,7 +18,7 @@ console.log("Persistencia Opt: ", program.opts().persist);
 console.log("Usuario: ", program.opts().u);
 
 dotenv.config({
-    path: enviroment === "prod" ? "./src/config/.env.production" : "./src/config/.env.development"
+    path: enviroment === "prod" ? "./.env.production" : "./.env.development"
 });
 
 export default {
